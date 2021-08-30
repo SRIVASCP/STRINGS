@@ -1,0 +1,21 @@
+/**palindrome*/
+#include <bits/stdc++.h>
+using namespace std;
+bool isPal(string &s);
+int main()
+{
+    string s;
+    cout<<"enter a string here"<<"\n";
+cin>>s;
+    cout<<"is it palindromic or not lets check"<<"\n";
+cout<<isPal(s);
+return 0;
+    
+}
+bool isPal(string &s)
+{
+    
+    string rev=s;
+    reverse(rev.begin(),rev.end());
+    return(rev==s);
+}
