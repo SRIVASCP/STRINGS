@@ -1,0 +1,35 @@
+/* SUBSEQUENCE */
+#include <bits/stdc++.h>
+using namespace std;
+bool isSubSeq(string &s1,string &s2,int n,int m);
+int main()
+{
+    string s1,s2;
+    cout<<"enter string1"<<"\n";
+    cin>>s1;
+    cout<<"enter string2"<<"\n";
+    cin>>s2;
+    cout<<"lets check wheter s2 is a subsequene of s1 or not"<<"\n";
+    int n,m;
+    n=s1.length();
+    m=s2.length();
+   int x= isSubSeq(s1,s2,n,m);
+if(x==0){
+    cout<<"not a subsequence";
+}
+else{
+    cout<<"it is a subsequence";
+}
+    return 0;
+}
+bool isSubSeq(string &s1,string &s2,int n,int m){
+    
+    int j=0;
+    for(int i=0;i<n && j<m;i++){
+        if(s1[i]==s2[j]){
+            j++;
+        }
+    }
+    
+    return(j==m);
+}
